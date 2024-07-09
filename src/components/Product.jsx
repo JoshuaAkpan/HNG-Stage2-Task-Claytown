@@ -39,7 +39,7 @@ const Product = ({ product }) => {
 
   return (
     <div className=" mx-auto w-fit my-0 md:my-1 lg:my-1 xl:my-1">
-      <div className="product-shadow w-[227px] h-[311px] relative overflow-hidden group transition box-border">
+      <div className="product-shadow sm:w-[151px] sm:h-[176px] md:w-[227px] md:h-[311px] relative  group overflow-hidden transition box-border ">
         <div className="w-full h-full flex flex-col justify-center items-left bg-white">
           {/* image */}
           <div className="mx-auto flex justify-center items-center">
