@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CheckoutNav, OrderSummary } from "../components";
+import navArrow from "../assets/img/navArrow.png";
 
 const ShippingDetails = () => {
   return (
     <div className="px-10 pt-32 w-full">
       <div className="bg-white mb-5 rounded-lg p-7 h-[80vh] lg:flex xl:flex lg:justify-between xl:justify-between">
         <div>
-          <Link to={"/checkout/payment"}>Arrow</Link>
+          <Link to={"/checkout"}>
+            <img className="mb-[30px]" src={navArrow} alt="navArrow" />
+          </Link>
 
           <CheckoutNav />
 
@@ -58,7 +61,7 @@ const ShippingDetails = () => {
 
             <Link to={"/checkout"}>Cancel Order</Link>
 
-            <Link to={'/checkout/shipping'}>
+            <Link to={"/checkout/shipping"}>
               <button>Payment</button>
             </Link>
           </form>

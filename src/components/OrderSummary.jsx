@@ -34,15 +34,17 @@ const OrderSummary = ({link, text}) => {
       </div>
 
 
-      <div className="relative">
+      <div className="relative w-56">
       <input
-        className="h-[56px] w-full  border-0 border-[#D1D1D8] rounded-[50px]"
+        className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-transparent border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
+
         type="text"
         id="coupon"
         placeholder="Coupon Code"
       />
 
-      <img className="absolute top-4 left-[260px]" src={trailing} alt="trailing" />
+      <img className="absolute top-1/2 left-[260px] right-3 transform -translate-y-1/2 w-5 h-5" 
+      src={trailing} alt="trailing" />
         
       </div>
       
