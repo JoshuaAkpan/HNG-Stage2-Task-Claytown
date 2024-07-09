@@ -13,7 +13,7 @@ const CheckOutPage = () => {
   const roundedShippingFee = Math.round(shippingFee);
 
   return (
-    <div className=" bg-orange-300 md:bg-gray-300 lg:bg-pink-300 xl:bg-yellow-300 sm:h-fit">
+    <div className=" sm:h-fit">
       <section className="py-32 container mx-auto flex flex-col">
         <div className=" bg-white mb-10 rounded-lg p-7 h-fit">
           <h1 className="mb-10">{`Cart (${cart.length})`} </h1>
@@ -79,7 +79,7 @@ const CheckOutPage = () => {
             </table>
 
             <div>
-              <div className="text-right">
+              <div className="text-right mt-5">
                 <p>Total amount - NGN {parseFloat(total).toFixed(2)}</p>
                 <p>Shipping fee - NGN {roundedShippingFee}</p>
                 <p>
@@ -87,9 +87,9 @@ const CheckOutPage = () => {
                   {parseFloat(total + roundedShippingFee).toFixed(2)}
                 </p>
 
-                <div className="flex items-center justify-center h-56 bg-red-600">
+                <div className="flex items-center justify-center h-fit ">
                   <Link to={"/checkout/address"}>
-                    <button className="border border-[#1C1C1C61] rounded-3xl py-1 px-3 mb-0 bg-[#DFAE72]">
+                    <button className=" mt-6 border border-[#1C1C1C61] rounded-[50px] py-3 px-10 mb-5 bg-[#DFAE72] ">
                       Checkout
                     </button>
                   </Link>

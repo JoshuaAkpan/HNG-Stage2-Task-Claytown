@@ -26,7 +26,7 @@ const ProductListPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 mx-auto sm:gap-1 md:gap-2 lg:gap-2 xl:gap2 md:mx-0 overflow-hidden">
+          <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 mx-auto gap-4 md:mx-0 overflow-hidden auto-rows-fr">
             {products.map((product) => {
               return <Product product={product} key={product.id} />;
             })}
