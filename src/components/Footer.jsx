@@ -7,20 +7,20 @@ const Footer = () => {
 
   if (locationPath === "/" || locationPath === "/products") {
     return (
-      <footer className="bg-[#fef8e6] px-12 pt-12 pb-6">
-        <div className=" mx-auto flex justify-between mb-20 gap-10 bg-red-400">
-          <div className="bg-blue-400 w-fit">
+      <footer className="bg-[#fef8e6] pt-12 pb-6 px-3">
+        <div className="mx-auto flex justify-evenly mb-20 gap-5">
+          <div className="w-fit">
             <h2 className="font-semibold mb-2 ">Explore</h2>
             <ul>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>About Us</li>
-              <li>Blog</li>
+              <li className="sm:text-[16px]">Home</li>
+              <li className="sm:text-[16px]">Shop</li>
+              <li className="sm:text-[16px]">About Us</li>
+              <li className="sm:text-[16px]">Blog</li>
               <li>Contact Us</li>
               <li>FAQ</li>
             </ul>
           </div>
-          <div className="bg-blue-400 w-fit">
+          <div className=" w-fit">
             <h2 className="font-semibold mb-2">Customer Service</h2>
             <ul>
               <li>Shipping & Returns</li>
@@ -30,7 +30,7 @@ const Footer = () => {
               <li>Support</li>
             </ul>
           </div>
-          <div className="bg-blue-400 w-fit">
+          <div className="w-fit">
             <h2 className="font-semibold mb-2">Get in Touch</h2>
             <ul className="leading-10">
               <li>Email: support@craftytown.com</li>

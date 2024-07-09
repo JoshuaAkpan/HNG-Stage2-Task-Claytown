@@ -108,7 +108,7 @@ const Navbar = () => {
           <div className="sm:order-2 md:order-2 lg:order-1 pb-2">
             <Link to={"/"} className="text-white text-lg font-semibold">
               <div>
-                <img className="w-[175px]" src={Logo} alt="ClayTown-Logo" />
+                <img className="sm:w-[175px] w-[160px] -ml-3  " src={Logo} alt="ClayTown-Logo" />
               </div>
             </Link>
           </div>
@@ -116,7 +116,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-12 w-[110px] lg:w-[130px] sm:order-3 md:order-3 lg:order-3 ">
             {/* search icon  */}
             <Link to={"/products"}>
-              <img className="w-[30px]" src={SearchIcon} alt="SearchIcon" />
+              <img className=" w-[30px]" src={SearchIcon} alt="SearchIcon" />
             </Link>
 
             {/* cart icon  */}

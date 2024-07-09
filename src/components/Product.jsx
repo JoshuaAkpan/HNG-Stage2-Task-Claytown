@@ -42,17 +42,17 @@ const Product = ({ product }) => {
       <div className="product-shadow relative h-full group overflow-hidden transition box-border p-3 bg-white">
         <div className="w-full h-full flex flex-col justify-between items-left ">
           {/* image */}
-          <div className="mx-auto flex justify-center items-center">
+          <div className="w-full mx-auto flex justify-center items-center">
             <img
               src={image}
               alt={title}
-              className="h-[160px] w-full group-hover:scale-[1.04] transition duration-300"
+              className="h-[180px] w-full object-cover object-center group-hover:scale-[1.04] transition duration-300"
             />
           </div>
 
             <div className="p-2 ">
               <div className="w-full  flex justify-between items-center gap-5">
-                <h1 className="font-semibold text-sm sm:text-base lg:text-[20px] w-fit mt- mt-2">
+                <h1 className="font-semibold text-sm sm:text-[16px] lg:text-[20px] w-fit mt-2">
                   {title}
                 </h1>
                 <button onClick={handleLike}>

@@ -32,6 +32,10 @@ const ProductListPage = () => {
             })}
           </div>
         </div>
+
+        <div>
+          
+        </div>
       </section>
     </div>
   );
