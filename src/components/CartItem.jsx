@@ -36,7 +36,7 @@ const CartItem = ({ item }) => {
           {/* item price  */}
           <div className="text-[14px]">{`NGN${price}`}</div>
 
-          <div className=" flex gap-x-2 h-[36px] md:w-[100px] lg:w-[150px]  text-sm items-end justify-end">
+          <div className="flex gap-x-2 h-[36px] md:w-[100px] lg:w-[150px]  text-sm items-end justify-end">
             {/* decrement */}
             <div
               onClick={() => {

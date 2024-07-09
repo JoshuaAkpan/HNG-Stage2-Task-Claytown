@@ -7,7 +7,7 @@ const CheckoutNav = () => {
       <NavLink
         to="/checkout/address"
         className={({ isActive }) =>
-          isActive ? 'font-bold text-blue-600' : 'text-gray-600'
+          isActive ? ' text-[#17183B]' : 'text-[#A2A3B1]'
         }
       >
         Address
@@ -16,7 +16,7 @@ const CheckoutNav = () => {
       <NavLink
         to="/checkout/shipping"
         className={({ isActive }) =>
-          isActive ? 'font-bold text-blue-600' : 'text-gray-600'
+          isActive ? 'text-[#17183B]' : 'text-[#A2A3B1]'
         }
       >
         Shipping
@@ -25,7 +25,7 @@ const CheckoutNav = () => {
       <NavLink
         to="/checkout/payment"
         className={({ isActive }) =>
-          isActive ? 'font-bold text-blue-600' : 'text-gray-600'
+          isActive ? ' text-[#17183B]' : 'text-[#A2A3B1]'
         }
       >
         Payment
