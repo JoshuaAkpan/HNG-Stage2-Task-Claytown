@@ -1,0 +1,21 @@
+.bg-custom-image{
+    background-image: url('../img/bg_hero.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.bg-sub-image{
+    background-image: url('../img/bg-subscribe.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.product-shadow{
+    box-shadow: 0px 8px 16px 0px #28282840;
+    
+}
