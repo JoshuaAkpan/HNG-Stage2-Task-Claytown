@@ -28,10 +28,10 @@ const Home = () => {
       <AboutUs />
       </section>
       
-      <section className="py-16">
-        <div className="w-fit mx-auto">
+      <section className="py-16 px-3">
+        <div className="mx-auto">
             <h1 className="text-center font-semibold text-3xl mb-5">Our best sellers</h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 mx-auto sm:gap-2 md:gap-1 lg:gap-1 xl:gap1 md:mx-0 overflow-hidden">
+          <div className=" w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 mx-auto gap-4 md:gap-1 lg:gap-1 xl:gap1 md:mx-0 overflow-hidden auto-rows-fr">
             {bestSellerProduct.map((product) => {
               return <Product product={product} key={product.id} />;
             })}

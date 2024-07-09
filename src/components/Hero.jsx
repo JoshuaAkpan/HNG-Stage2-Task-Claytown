@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className='bg-custom-image h-screen w-full  flex flex-col m-auto items-center justify-center text-center py-20'>
 
-      <h1 className='text-white sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl w-[60%] p-[10px] font-semibold mb-20 '>Stylish, functional pottery for modern living</h1>
+      <h1 className='text-white text-2xl md:text-4xl lg:text-5xl xl:text-6xl p-[10px] font-semibold mb-20 '>Stylish, functional pottery for modern living</h1>
 
       <p className='text-white w-[211px] h-[96px] pb-[109px] mb-16'>Discover handmade clay home decor items crafted by the finest artisans from around the world</p>
 
