@@ -33,7 +33,7 @@ const Address = () => {
 
             <div className="border-[#FBC47CB2] text-[#FBC47CB2]">HOME</div>
 
-            <div className="sm:hidden lg:block xl:block">
+            <div className="hidden lg:block xl:block">
               <div>
                 Edit
                 <span> |</span>
@@ -57,7 +57,7 @@ const Address = () => {
 
             <div className="border-[#FBC47CB2] text-[#FBC47CB2]">OFFICE</div>
 
-            <div className="sm:hidden lg:block xl:block">
+            <div className="hidden lg:block xl:block">
               <div>
                 Edit
                 <span> | </span>
