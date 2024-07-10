@@ -1,12 +1,11 @@
 import React from "react";
-import { OrderSummary } from "../components";
-import { Shipping, Payment } from "../pages";
+import { OrderSummary, Shipping, Payment } from "../components";
 import { Link } from "react-router-dom";
 import navArrow from "../assets/img/navArrow.png";
 import radio_selected from "../assets/img/radio_selected.png";
 import radio_off from "../assets/img/radio_off.png";
 
-const Address = () => {
+const CheckOutProcess = () => {
   // bg-[#fef8e6]
 
   return (
@@ -74,17 +73,16 @@ const Address = () => {
 
           <div className="block lg:hidden">
             <OrderSummary
-              link="/checkout/payment/shipping-details"
+              link="/checkout/shipping-details"
               text="Continue to Shipping"
             />
           </div>
-
         </div>
       </div>
 
       <div className="hidden lg:block">
         <OrderSummary
-          link="/checkout/payment/shipping-details"
+          link="/checkout/shipping-details"
           text="Continue to Shipping"
         />
       </div>
@@ -92,4 +90,4 @@ const Address = () => {
   );
 };
 
-export default Address;
+export default CheckOutProcess;

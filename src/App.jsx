@@ -2,11 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import {
-  Address,
+  CheckOutProcess,
   Home,
-  Payment,
   ProductListPage,
-  Shipping,
   CheckOutPage,
   PaymentDetailsPage,
   ShippingDetails,
@@ -22,13 +20,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductListPage />} />
-        {/* <Route path="#about-us" element={<AboutUs />} /> */}
         <Route path="/checkout" element={<CheckOutPage />} />
-        <Route path="/checkout/address" element={<Address />} />
-        <Route path="/checkout/shipping" element={<Shipping />} />
-        <Route path="/checkout/payment/shipping-details" element={<ShippingDetails />} />
-        <Route path="/checkout/payment" element={<Payment />} />
-        <Route path="/checkout/payment/payment-details" element={<PaymentDetailsPage />} />
+        <Route path="/checkout/processing" element={<CheckOutProcess />} />
+      
+        <Route path="/checkout/shipping-details" element={<ShippingDetails />} />
+        <Route path="/checkout/payment-details" element={<PaymentDetailsPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

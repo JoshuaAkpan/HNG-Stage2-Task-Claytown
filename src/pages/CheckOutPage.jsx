@@ -39,12 +39,12 @@ const CheckOutPage = () => {
               </p>
 
               <div className="flex items-center justify-center h-fit ">
-                  <Link to={"/checkout/address"}>
-                    <button className=" mt-6 border border-[#1C1C1C61] rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72] ">
-                      Checkout
-                    </button>
-                  </Link>
-                </div>
+                <Link to={"/checkout/processing"}>
+                  <button className=" mt-6 border border-[#1C1C1C61] rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72] ">
+                    Checkout
+                  </button>
+                </Link>
+              </div>
             </div>
             <div className="text-right text-[#FF7810]">
               <Link to="/">Back to home</Link>
@@ -90,7 +90,7 @@ const CheckOutPage = () => {
                 </p>
 
                 <div className="flex items-center justify-center h-fit ">
-                  <Link to={"/checkout/address"}>
+                  <Link to={"/checkout/processing"}>
                     <button className=" mt-6 border border-[#1C1C1C61] rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72] ">
                       Checkout
                     </button>

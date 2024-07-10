@@ -24,7 +24,7 @@ const Payment = () => {
 
         <div className="flex justify-between mb-4 items-center w-full text-[12px] md:text-[16px]">
           <div className=" w-fit flex items-center justify-between">
-            <img src={radio_selected} alt="" />
+            <img src={radio_off} alt="" />
             {/* card icon */}
             <div> **** 6754</div>
             <div className="hidden lg:block">Expires 11/2025</div>
@@ -44,9 +44,13 @@ const Payment = () => {
         </div>
       </Link>
 
-      <Link to={"/checkout/payment/payment-details"}>
-        <button className="text-[white] w-[250px] h-[50px]  mt-6 rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72]">Pay now</button>
-      </Link>
+      <div className="hidden lg:flex items-center justify-center h-fit ">
+        <Link to={"/checkout/shipping-details"}>
+          <button className="text-[white] w-[250px] h-[50px]  mt-6 rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72] ">
+            Pay now
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

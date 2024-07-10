@@ -7,3 +7,5 @@ export {default as CheckoutNav} from './CheckoutNav'
 export {default as AboutUs} from './AboutUs'
 export {default as PageNotFound} from './PageNotFound'
 export {default as OrderSummary} from './OrderSummary'
+export { default as Shipping } from "./Shipping";
+export { default as Payment } from "./Payment";
