@@ -15,7 +15,7 @@ const ShippingDetails = () => {
           <h2 className="mt-12 mb-4">Add Address</h2>
 
           <form className="w-[90%] ">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-[33px]">
               <label htmlFor="cards" className="text-[#FBC47CB2]">
                 Use saved address
               </label>

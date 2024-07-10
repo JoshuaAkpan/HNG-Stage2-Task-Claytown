@@ -1,81 +1,102 @@
 import React from "react";
 import { CheckoutNav, OrderSummary } from "../components";
+
+import navArrow from "../assets/img/navArrow.png";
 import { Link } from "react-router-dom";
 
 const PaymentDetailsPage = () => {
-  // /checkout/payment/payment-details
   return (
-    <div className="px-10 pt-32 w-full">
-      <div className="bg-white mb-5 rounded-lg p-7 h-[80vh] lg:flex xl:flex lg:justify-between xl:justify-between">
-        <div>
-          <Link to={"/checkout/payment"}>Arrow</Link>
+    <div className="px-10 pt-32 w-full lg:flex lg:justify-between">
+      <div className="bg-[#FCF9F1] mb-7 rounded-2xl p-7 h-fit lg:w-[895px]">
+        <Link to={"/checkout/shipping-details"}>
+          <img className="mb-[42px]" src={navArrow} alt="navArrow" />
+        </Link>
 
-          <CheckoutNav />
+        <h2 className="mt-12 mb-4">Payment Details</h2>
 
-          <h2 className="mt-12 mb-4">Payment Details</h2>
-
-          <form>
-            <label htmlFor="cards"></label>
-            <select name="cards" id="cards" className="bg-[#fef8e6]">
-              <option value="mastercard" selected>
-                Mastercard ending 234
+        <form className="w-[90%] ">
+          <div className="flex justify-between items-center mb-[33px]">
+            <label htmlFor="cards" className="text-[#FBC47CB2]">
+              Use saved card
+            </label>
+            <select
+              name="card"
+              id="card"
+              className="h-[56px] w-[60%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
+            >
+              <option value="address" selected>
+                Card ending 234
               </option>
-              <option value="verve">verve</option>
             </select>
+          </div>
 
-            <label htmlFor="name">Name on card</label>
-            <input
-              className="bg-[#fef8e6]"
-              type="text"
-              id="name"
-              placeholder="John Smith"
-            />
+          <label htmlFor="name">Name on card</label>
+          <input
+            className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a] mt-[15px] mb-[30px]"
+            type="text"
+            id="name"
+            placeholder="Ayo Deji"
+          />
 
-            <label htmlFor="card_num">Card number</label>
-            <input
-              className="bg-[#fef8e6]"
-              type="text"
-              id="card_num"
-              placeholder="123 - 456-"
-            />
+          <label htmlFor="card_num">Card number</label>
+          <input
+            className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a] mt-[15px] mb-[30px]"
+            type="text"
+            id="card_num"
+            placeholder=""
+          />
 
-            <label htmlFor="card_exp">Card number</label>
-            <div>
-              <input
-                className="bg-[#fef8e6]"
-                type="text"
-                id="card_exp"
-                placeholder="03"
-              />
-              /
-              <input
-                className="bg-[#fef8e6]"
-                type="text"
-                id="card_exp"
-                placeholder="24"
-              />
+          <div>
+            <div className="flex justify-between">
+              <label htmlFor="card_exp">Expiration</label>
+
+              <label htmlFor="card_exp">CVV</label>
             </div>
 
-            <label htmlFor="card_num">Card number</label>
-            <input
-              className="bg-[#fef8e6]"
-              type="text"
-              id="cvv"
-              placeholder="123"
-            />
+            <div className="flex justify-between mt-[15px] mb-[50px]">
+              <div className="flex justify-center">
+                <input
+                  className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
+                  type="text"
+                  id="card_exp"
+                  placeholder="03"
+                /> 
+                <p className="text-[40px] text-[#b8b8b8]">/</p>
+                <input
+                  className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
+                  type="text"
+                  id="card_exp"
+                  placeholder="24"
+                />
+              </div>
 
-            <hr />
 
-            <Link to={"/checkout"}>Cancel Order</Link>
+              <input
+                className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
+                type="text"
+                id="card_exp"
+                placeholder="123"
+              />
+            </div>
+          </div>
 
-            <Link>
-              <button>Complete order</button>
+          <hr />
+
+          <div className="mt-[33px] flex justify-center items-center  mb-[200px]">
+            <Link to={"/checkout"}>
+              <p>Cancel Order</p>
             </Link>
-          </form>
-        </div>
 
-        <OrderSummary />
+            <Link to={"/checkout/payment-details"}>
+              <button className="text-[white] w-full h-[56px]  mt-6 rounded-[50px] py-2 px-10 mb-5 ml-5 bg-[#DFAE72]">
+                Payment
+              </button>
+            </Link>
+          </div>
+        </form>
       </div>
+
+      <OrderSummary />
     </div>
   );
 };
