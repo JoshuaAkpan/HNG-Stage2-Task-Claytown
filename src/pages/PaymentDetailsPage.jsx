@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckoutNav, OrderSummary } from "../components";
+import { OrderSummary } from "../components";
 
 import navArrow from "../assets/img/navArrow.png";
 import { Link } from "react-router-dom";

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { OrderSummary } from "../components";
 import navArrow from "../assets/img/navArrow.png";
 
 const ShippingDetails = () => {

@@ -56,7 +56,7 @@ const CheckOutProcess = () => {
 
           <hr className="mt-7" />
 
-          <Link to={"/checkout"}>
+          <Link to={"/checkout/shipping-details"}>
             <div className="text-[#FBC47CB2] mt-[26px] mb-[45px]">
               <span className="text-[24]">+</span>
               <span className="text-sm md:text-[16px]"> Add New Address</span>
