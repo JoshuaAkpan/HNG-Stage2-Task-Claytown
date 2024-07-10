@@ -1,5 +1,6 @@
 import React from "react";
-import { CheckoutNav, OrderSummary } from "../components";
+import { OrderSummary } from "../components";
+import { Shipping, Payment } from "../pages";
 import { Link } from "react-router-dom";
 import navArrow from "../assets/img/navArrow.png";
 import radio_selected from "../assets/img/radio_selected.png";
@@ -9,14 +10,14 @@ const Address = () => {
   // bg-[#fef8e6]
 
   return (
-    <div className="px-10 pt-32 w-full">
-      <div className="bg-[#FCF9F1] mb-5 rounded-lg p-7 h-[80vh] lg:flex xl:flex lg:justify-between xl:justify-between">
+    <div className="px-10 pt-32 w-full lg:flex lg:justify-between">
+      <div className="bg-[#FCF9F1] mb-5 rounded-lg p-7 h-fit lg:w-[65%]">
         <div className="">
           <Link to={"/checkout"}>
             <img className="mb-[30px]" src={navArrow} alt="navArrow" />
           </Link>
 
-          <CheckoutNav />
+          <h1>Address</h1>
 
           <div className="mt-[38px] flex justify-between">
             <div className="flex w-[195px] justify-between items-start">
@@ -31,15 +32,7 @@ const Address = () => {
               </div>
             </div>
 
-            <div className="border-[#FBC47CB2] text-[#FBC47CB2]">HOME</div>
-
-            <div className="hidden lg:block xl:block">
-              <div>
-                Edit
-                <span> |</span>
-                <span className="text-red-600">Remove</span>
-              </div>
-            </div>
+            <div className="border-[#FBC47CB2] text-[#FBC47CB2]">Edit</div>
           </div>
 
           <div className="flex justify-between mt-5">
@@ -55,15 +48,7 @@ const Address = () => {
               </div>
             </div>
 
-            <div className="border-[#FBC47CB2] text-[#FBC47CB2]">OFFICE</div>
-
-            <div className="hidden lg:block xl:block">
-              <div>
-                Edit
-                <span> | </span>
-                <span className="text-red-600">Remove</span>
-              </div>
-            </div>
+            <div className="border-[#FBC47CB2] text-[#FBC47CB2]">Edit</div>
           </div>
 
           <hr className="mt-7" />
@@ -76,12 +61,19 @@ const Address = () => {
           </Link>
         </div>
 
+        {/*SHIPPING*/}
+        <Shipping />
+
+        {/*PAYMENT METHOD*/}
+        <Payment />
+
+      </div>
         {/* Order Summary  */}
+
         <OrderSummary
           link="/checkout/payment/shipping-details"
           text="Continue to Shipping"
         />
-      </div>
     </div>
   );
 };

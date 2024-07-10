@@ -1,45 +1,52 @@
 import React from "react";
-import { CheckoutNav } from "../components";
+import radio_selected from "../assets/img/radio_selected.png";
+import radio_off from "../assets/img/radio_off.png";
 import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
-    <div className="px-10 pt-32 w-full">
-      <div className="bg-[#fef8e6] mb-5 rounded-lg p-7 h-[80vh]">
-        <CheckoutNav />
+    <div className="pt-7 w-full mb-10">
+      <h2 className="mb-4">Payment Method</h2>
 
-        <h2 className="mt-12 mb-4">Payment Method</h2>
-
-        {/* Payment form goes here */}
-        <div>
-          <div className="flex p-4 border border-gray-400 items-center">
-            <img className="rounded-full bg-red-300 w-5 h-5" src="" alt="" />
+      {/* Payment form goes here */}
+      <div>
+        <div className="flex justify-between mb-4 items-center w-full text-[12px] ">
+          <div className=" w-fit flex items-center justify-between">
+            <img src={radio_selected} alt="" />
             {/* card icon */}
-            <div className="bg-red-300 h-[15px] w-[20px]"></div>
-            <div> **** 6754</div>
-            <div> Expires 06/2021</div>
+            <div className="">**** 6754</div>
+            <div className="hidden lg:block">Expires 06/2021</div>
           </div>
 
-          <div className="flex p-4 border border-gray-400 items-center">
-            <img className="rounded-full bg-red-300 w-5 h-5" src="" alt="" />
-            {/* card icon */}
-            <div className="bg-red-300 h-[15px] w-[20px]"></div>
-            <div> **** 6754</div>
-            <div> Expires 06/2021</div>
-          </div>
+          <div className="block lg:hidden">Expires 06/2021</div>
+          <div className="text-red-600 hidden lg:block">Remove</div>
         </div>
 
-        <hr />
+        <div className="flex justify-between mb-4 items-center w-full text-[12px] ">
+          <div className=" w-fit flex items-center justify-between">
+            <img src={radio_selected} alt="" />
+            {/* card icon */}
+            <div> **** 6754</div>
+            <div className="hidden lg:block">Expires 11/2025</div>
+          </div>
 
-        <p>+ Add Payment method</p>
-
-        <div  className="align-center">
-          <Link to={'/checkout/payment/payment-details'} >
-          
-          <button>Place Your Order and Pay</button>
-          </Link>
+          <div className="block lg:hidden">Expires 11/2025</div>
+          <div className="text-red-600 hidden lg:block">Remove</div>
         </div>
       </div>
+
+      <hr />
+
+      <Link to={"/checkout"}>
+        <div className="text-[#FBC47CB2] mt-[26px] mb-[45px]">
+          <span className="text-[24]">+</span>
+          <span className="text-sm"> Add a card</span>
+        </div>
+      </Link>
+
+      <Link to={"/checkout/payment/payment-details"}>
+        <button className="text-[white] w-[250px] h-[50px]  mt-6 rounded-[50px] py-2 px-10 mb-5 bg-[#DFAE72]">Pay now</button>
+      </Link>
     </div>
   );
 };
