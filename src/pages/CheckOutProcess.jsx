@@ -13,10 +13,10 @@ const CheckOutProcess = () => {
       <div className="bg-[#FCF9F1] mb-7 rounded-2xl p-7 h-fit lg:w-[895px]">
         <div className="">
           <Link to={"/checkout"}>
-            <img className="mb-[30px]" src={navArrow} alt="navArrow" />
+            <img className="mb-[42px]" src={navArrow} alt="navArrow" />
           </Link>
 
-          <h1 className="md:text-[24px]">Address</h1>
+          <h1 className="md:text-[24px] mb-[57]">Address</h1>
 
           <div className="mt-[38px] flex justify-between">
             <div className="flex w-[195px] justify-between items-start  md:w-[220px]">

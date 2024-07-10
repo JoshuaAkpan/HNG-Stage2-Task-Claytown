@@ -9,7 +9,7 @@ const ShippingDetails = () => {
       <div className="bg-[#FCF9F1] mb-7 rounded-2xl p-7 h-fit lg:w-[895px]">
         <div>
           <Link to={"/checkout/processing"}>
-            <img className="mb-[30px]" src={navArrow} alt="navArrow" />
+            <img className="mb-[42px]" src={navArrow} alt="navArrow" />
           </Link>
 
           <h2 className="mt-12 mb-4">Add Address</h2>
@@ -75,7 +75,7 @@ const ShippingDetails = () => {
 
             <hr />
 
-            <div className="mt-[33px] flex justify-center items-center ">
+            <div className="mt-[33px] flex justify-center items-center  mb-[200px]">
               <Link to={"/checkout"}>
                 <p>Cancel Order</p>
               </Link>
@@ -90,20 +90,20 @@ const ShippingDetails = () => {
 
           </form>
 
-          <div className="block lg:hidden">
+          {/* <div className="block lg:hidden">
             <OrderSummary
               link="/checkout/payment-details"
               text="Continue to Shipping"
             />
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="hidden lg:block">
+      {/* <div className="hidden lg:block">
         <OrderSummary
           link="/checkout/payment-details"
           text="Continue to Shipping"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
