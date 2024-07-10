@@ -94,9 +94,21 @@ const PaymentDetailsPage = () => {
             </Link>
           </div>
         </form>
+
+        <div className="block lg:hidden">
+            <OrderSummary
+              link="/checkout/shipping-details"
+              text="Continue to Shipping"
+            />
+          </div>
       </div>
 
-      <OrderSummary />
+      <div className="hidden lg:block">
+        <OrderSummary
+          link="/checkout/shipping-details"
+          text="Continue to Shipping"
+        />
+      </div>
     </div>
   );
 };

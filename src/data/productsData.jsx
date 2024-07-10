@@ -15,7 +15,7 @@ const productsData = [
   {
     id: 1,
     image: mpStillLife1,
-    title: "Still life pottery",
+    title: "Ancient",
     price: 133.99,
     rating: 5.0, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -23,7 +23,7 @@ const productsData = [
   {
     id: 2,
     image: mpColorful,
-    title: "Still life pottery",
+    title: "Colourful",
     price: 19.99,
     rating: 4.5, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -31,7 +31,7 @@ const productsData = [
   {
     id: 3,
     image: mpOff,
-    title: "Still life pottery",
+    title: "White",
     price: 19.99,
     rating: 4.1, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -39,7 +39,7 @@ const productsData = [
   {
     id: 4,
     image: mpMono,
-    title: "Still life pottery",
+    title: "Monochrome tray",
     price: 79.99,
     rating: 4.5, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -47,7 +47,7 @@ const productsData = [
   {
     id: 5,
     image: mpAncient,
-    title: "Still life pottery",
+    title: "Ancient",
     price: 11.99,
     rating: 3.5, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -55,7 +55,7 @@ const productsData = [
   {
     id: 6,
     image: mpVase,
-    title: "Still life pottery",
+    title: "Vase set",
     price: 11.99,
     rating: 3.5, // Assuming rating is out of 5 stars
     label: "in stock",
@@ -63,7 +63,7 @@ const productsData = [
   {
     id: 7,
     image: mpGray,
-    title: "Still life pottery",
+    title: "Gray jug",
     price: 11.99,
     rating: 3.5, // Assuming rating is out of 5 stars
     label: "in stock",

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import { Product } from "../components";
+import paginationIcon from '../assets/img/paginationIcon.png'
 
 const ProductListPage = () => {
   const { products } = useContext(ProductContext);
@@ -33,8 +34,8 @@ const ProductListPage = () => {
           </div>
         </div>
 
-        <div>
-          
+        <div className="mt-[159px] flex justify-center items-center">
+          <img className="w-[80%]" src={paginationIcon} alt="pagination" />
         </div>
       </section>
     </div>
