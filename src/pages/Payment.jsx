@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
-    <div className="pt-7 w-full mb-10">
-      <h2 className="mb-4">Payment Method</h2>
+    <div className="pt-7 w-full mb-10 md:text-[16px] ">
+      <h2 className="mb-4 md:text-[24px] ">Payment Method</h2>
 
       {/* Payment form goes here */}
       <div>
-        <div className="flex justify-between mb-4 items-center w-full text-[12px] ">
+        <div className="flex justify-between mb-4 items-center w-full text-[12px] md:text-[16px]">
           <div className=" w-fit flex items-center justify-between">
             <img src={radio_selected} alt="" />
             {/* card icon */}
@@ -22,7 +22,7 @@ const Payment = () => {
           <div className="text-red-600 hidden lg:block">Remove</div>
         </div>
 
-        <div className="flex justify-between mb-4 items-center w-full text-[12px] ">
+        <div className="flex justify-between mb-4 items-center w-full text-[12px] md:text-[16px]">
           <div className=" w-fit flex items-center justify-between">
             <img src={radio_selected} alt="" />
             {/* card icon */}
@@ -40,7 +40,7 @@ const Payment = () => {
       <Link to={"/checkout"}>
         <div className="text-[#FBC47CB2] mt-[26px] mb-[45px]">
           <span className="text-[24]">+</span>
-          <span className="text-sm"> Add a card</span>
+          <span className="text-sm md:text-[16px] "> Add a card</span>
         </div>
       </Link>
 

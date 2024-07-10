@@ -5,7 +5,7 @@ import trailing from '../assets/img/trailing.png'
 const OrderSummary = ({link, text}) => {
 
   return (
-    <div className="md:max-w-sm lg:max-w-sm xl:max-w-sm ">
+    <div className="md:max-w-sm lg:max-w-sm xl:max-w-sm bg-[#FCF9F1] lg:p-[32px] lg:w-[380px] lg:h-[589px] lg:ml-4 lg:border lg:border-[#D1D1D8] lg:rounded-[15px]">
       <h1 className="font-semibold text-[24px]">Order Summary</h1>
       <div className="flex justify-between pb-[6px]">
         <p>Price</p>
@@ -34,16 +34,16 @@ const OrderSummary = ({link, text}) => {
       </div>
 
 
-      <div className="relative w-56">
+      <div className="relative w-full">
       <input
         className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-transparent border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
 
         type="text"
         id="coupon"
-        placeholder="Coupon Code"
+        placeholder="Voucher Code"
       />
 
-      <img className="absolute top-1/2 left-[260px] right-3 transform -translate-y-1/2 w-5 h-5" 
+      <img className="absolute top-1/2  right-3 transform -translate-y-1/2 w-5 h-5" 
       src={trailing} alt="trailing" />
         
       </div>
