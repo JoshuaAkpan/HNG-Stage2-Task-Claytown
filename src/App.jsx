@@ -8,6 +8,7 @@ import {
   CheckOutPage,
   PaymentDetailsPage,
   ShippingDetails,
+  Completed,
 } from "./pages";
 import {  PageNotFound } from "./components";
 
@@ -22,11 +23,12 @@ const App = () => {
         <Route path="/products" element={<ProductListPage />} />
         <Route path="/checkout" element={<CheckOutPage />} />
         <Route path="/checkout/processing" element={<CheckOutProcess />} />
-      
         <Route path="/checkout/shipping-details" element={<ShippingDetails />} />
         <Route path="/checkout/payment-details" element={<PaymentDetailsPage />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/checkout/order-complete" element={<Completed />} />
       </Routes>
+      
       <Footer />
     </div>
   );

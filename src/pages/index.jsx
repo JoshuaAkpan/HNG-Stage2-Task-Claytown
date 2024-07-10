@@ -4,3 +4,4 @@ export { default as ProductListPage } from "./ProductListPage";
 export { default as CheckOutPage } from "./CheckOutPage";
 export { default as PaymentDetailsPage } from "./PaymentDetailsPage";
 export { default as ShippingDetails } from "./ShippingDetails";
+export { default as Completed } from "./Completed";

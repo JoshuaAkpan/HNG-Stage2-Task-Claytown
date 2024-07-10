@@ -61,7 +61,7 @@ const PaymentDetailsPage = () => {
                   id="card_exp"
                   placeholder="03"
                 /> 
-                <p className="text-[40px] text-[#b8b8b8]">/</p>
+                <p className="text-[40px] text-[#4A5568]">/</p>
                 <input
                   className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
                   type="text"
@@ -87,9 +87,9 @@ const PaymentDetailsPage = () => {
               <p>Cancel Order</p>
             </Link>
 
-            <Link to={"/checkout/payment-details"}>
+            <Link to={"/checkout/order-complete"}>
               <button className="text-[white] w-full h-[56px]  mt-6 rounded-[50px] py-2 px-10 mb-5 ml-5 bg-[#DFAE72]">
-                Payment
+                Complete Order
               </button>
             </Link>
           </div>
