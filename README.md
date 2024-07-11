@@ -1,2 +1,8 @@
 # HNG-Stage2-Task-Claytown
 ClayTown
+
+AN E-COMMERCE WEBSITE... ENJOY!!!
+
+DON'T FORGET TO ADD TO CART
+
+
