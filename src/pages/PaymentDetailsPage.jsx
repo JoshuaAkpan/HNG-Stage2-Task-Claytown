@@ -1,8 +1,9 @@
 import React from "react";
 import { OrderSummary } from "../components";
+import { Link } from "react-router-dom";
 
 import navArrow from "../assets/img/navArrow.png";
-import { Link } from "react-router-dom";
+import checked from "../assets/img/checked.png";
 
 const PaymentDetailsPage = () => {
   return (
@@ -31,12 +32,21 @@ const PaymentDetailsPage = () => {
           </div>
 
           <label htmlFor="name">Name on card</label>
-          <input
-            className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a] mt-[15px] mb-[30px]"
-            type="text"
-            id="name"
-            placeholder="Ayo Deji"
-          />
+
+          <div className="relative w-full">
+            <input
+              className="h-[56px] w-full  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a] mt-[15px] mb-[30px]"
+              type="text"
+              id="name"
+              placeholder="Ayo Deji"
+            />
+
+            <img
+              className="absolute top-[45%]  right-3 transform -translate-y-1/2 w-5 h-5"
+              src={checked}
+              alt="checked"
+            />
+          </div>
 
           <label htmlFor="card_num">Card number</label>
           <input
@@ -47,7 +57,7 @@ const PaymentDetailsPage = () => {
           />
 
           <div>
-            <div className="flex justify-between">
+            <div className="flex justify-between ">
               <label htmlFor="card_exp">Expiration</label>
 
               <label htmlFor="card_exp">CVV</label>
@@ -60,7 +70,7 @@ const PaymentDetailsPage = () => {
                   type="text"
                   id="card_exp"
                   placeholder="03"
-                /> 
+                />
                 <p className="text-[40px] text-[#4A5568]">/</p>
                 <input
                   className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
@@ -69,7 +79,6 @@ const PaymentDetailsPage = () => {
                   placeholder="24"
                 />
               </div>
-
 
               <input
                 className="h-[56px] w-[40%]  border-[#D1D1D8] rounded-[50px] bg-[#FBC47C24] border  py-2 pl-3 pr-10 focus:outline-none focus:border-[#59595a]"
@@ -96,17 +105,17 @@ const PaymentDetailsPage = () => {
         </form>
 
         <div className="block lg:hidden">
-            <OrderSummary
-              link="/checkout/shipping-details"
-              text="Continue to Shipping"
-            />
-          </div>
+          <OrderSummary
+            link="/checkout/shipping-details"
+            text="Continue to Shipping"
+          />
+        </div>
       </div>
 
       <div className="hidden lg:block">
         <OrderSummary
           link="/checkout/shipping-details"
-          text="Continue to Shipping"
+          text="Continue to Shipping now"
         />
       </div>
     </div>

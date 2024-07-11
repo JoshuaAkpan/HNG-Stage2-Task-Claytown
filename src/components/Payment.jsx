@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import radio_selected from "../assets/img/radio_selected.png";
 import radio_off from "../assets/img/radio_off.png";
-import { Link } from "react-router-dom";
+import visa from "../assets/img/visa.png";
+import mastercard from "../assets/img/mastercard.svg";
 
 const Payment = () => {
   return (
@@ -13,7 +15,7 @@ const Payment = () => {
         <div className="flex justify-between mb-4 items-center w-full text-[12px] md:text-[16px]">
           <div className=" w-fit flex items-center justify-between">
             <img src={radio_selected} alt="" />
-            {/* card icon */}
+            <img src={visa} alt="" />
             <div className="">**** 6754</div>
             <div className="hidden lg:block">Expires 06/2021</div>
           </div>
@@ -25,8 +27,8 @@ const Payment = () => {
         <div className="flex justify-between mb-4 items-center w-full text-[12px] md:text-[16px]">
           <div className=" w-fit flex items-center justify-between">
             <img src={radio_off} alt="" />
-            {/* card icon */}
-            <div> **** 6754</div>
+            <img src={mastercard} alt="" />
+            <div>**** 6754</div>
             <div className="hidden lg:block">Expires 11/2025</div>
           </div>
 

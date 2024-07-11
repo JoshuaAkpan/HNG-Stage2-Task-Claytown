@@ -14,7 +14,7 @@ const CheckOutPage = () => {
 
   return (
     <div className="sm:h-fit">
-      <section className="py-32 container mx-auto flex flex-col">
+      <section className="py-32 container mx-auto flex flex-col text-xl">
         <div className=" bg-[#FCF9F1] mb-10 rounded-lg p-7 h-fit">
           <h1 className="mb-10">{`Cart (${cart.length})`} </h1>
           {cart.map((item) => {
