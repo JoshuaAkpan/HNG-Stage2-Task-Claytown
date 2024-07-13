@@ -68,7 +68,7 @@ const Product = ({ product }) => {
                 </button>
               </div>
 
-              <p>NGN {price}</p>
+              <p>NGN {price.toLocaleString()}</p>
               <p className="flex gap-[4px] mb-2">
                 <Star />
                 <Star />

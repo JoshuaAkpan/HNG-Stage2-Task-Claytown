@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +20,11 @@
   src: local('Futura-Book'), url('./assets/fonts/Futura-Book.ttf') format('truetype');
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 

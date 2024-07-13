@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       // custom: ["Nunito", "sans-serif"],
       futura: ["Futura Bk", "sans-serif"],
+      gloria: ["Gloria Hallelujah", "sans-serif"],
 
 
       

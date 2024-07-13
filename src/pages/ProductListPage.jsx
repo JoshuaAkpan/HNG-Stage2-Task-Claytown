@@ -7,7 +7,7 @@ const ProductListPage = () => {
 
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(4);
+  const [postsPerPage, setPostsPerPage] = useState(6);
 
 
   const lastPostIndex = currentPage * postsPerPage

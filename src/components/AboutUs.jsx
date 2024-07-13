@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div className="text-center flex flex-col items-center sm:mx-5 md:mx-14  w-fit">
         <div className="mb-10">
           <p className="lg:text-[28px] text-[18px]">
-            <span>Claytown</span> is where tradition meets modern craftsmanship.
+            <span className="font-gloria">Claytown</span> is where tradition meets modern craftsmanship.
             We are passionate artisans dedicated to bringing you the finest
             handmade clay and wooden products from around the world
           </p>

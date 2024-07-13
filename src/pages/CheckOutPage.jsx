@@ -32,10 +32,10 @@ const CheckOutPage = () => {
           {/* SMALL DEVICES AND TAB */}
           <div className="lg:hidden sm:block md:block">
             <div className="text-right">
-              <p>Total amount - NGN {parseFloat(total).toFixed(2)}</p>
-              <p>Shipping fee - NGN {roundedShippingFee}</p>
+              <p>Total amount - NGN {parseFloat(total).toLocaleString()}</p>
+              <p>Shipping fee - NGN {roundedShippingFee.toLocaleString()}</p>
               <p>
-                Total - NGN {parseFloat(total + roundedShippingFee).toFixed(2)}
+                Total - NGN {parseFloat(total + roundedShippingFee).toLocaleString()}
               </p>
 
               <div className="flex items-center justify-center h-fit ">
