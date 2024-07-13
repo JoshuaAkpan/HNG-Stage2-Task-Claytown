@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
 // importing product data - STATIC DATA
-import productsData from "../data/productsData";
+// import productsData from "../data/productsData";
 
 // create context
 export const ProductContext = createContext();
@@ -9,24 +10,27 @@ export const ProductContext = createContext();
 const ProductProvider = ({ children }) => {
   //products state
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState("");
 
-  //fetch products from static data
-  useEffect(() => {
-    // Here, I simulate a delay to mimic an asynchronous operation
-    setTimeout(() => {
-      // Set products data after delay
-      setProducts(productsData);
-    }, 1000); // Simulate a 1 second delay
+
+  useEffect(async () => {
+    try {
+      const response = await axios.get(
+        `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_APP_KEY}`
+      );
+      
+      setProducts(response.data.items);
+      
+      
+    } catch (error) {
+      setError(error.message);
+    }
+  
   }, []);
 
-  // useEffect(async ()=>{
-  //   try {
-  //     const response = await
-      
-  //   } catch (error) {
-      
-  //   }
-  // }, [])
+
+  console.log(products);
+
 
   return (
     <ProductContext.Provider value={{ products }}>

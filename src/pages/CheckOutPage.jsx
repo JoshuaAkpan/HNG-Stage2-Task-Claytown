@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 const CheckOutPage = () => {
   const { cart, total } = useContext(CartContext);
 
+  //getting price
+  console.log("The total is", total);
+
   //calculating shipping fee
   const shippingPercentage = 1.14;
   const shippingFee = (shippingPercentage / 100) * total;
@@ -35,7 +38,8 @@ const CheckOutPage = () => {
               <p>Total amount - NGN {parseFloat(total).toLocaleString()}</p>
               <p>Shipping fee - NGN {roundedShippingFee.toLocaleString()}</p>
               <p>
-                Total - NGN {parseFloat(total + roundedShippingFee).toLocaleString()}
+                Total - NGN{" "}
+                {parseFloat(total + roundedShippingFee).toLocaleString()}
               </p>
 
               <div className="flex items-center justify-center h-fit ">
@@ -69,11 +73,11 @@ const CheckOutPage = () => {
                 {cart.map((item) => {
                   return (
                     <tr key={item.id}>
-                      <td>{item.title}</td>
+                      <td>{item.name}</td>
                       <td>{item.amount}</td>
-                      <td>{`NGN ${parseFloat(item.price * item.amount).toFixed(
-                        2
-                      )}`}</td>
+                      <td>{`NGN ${parseFloat(
+                        item.current_price?.[0]?.NGN?.[0] * item.amount
+                      ).toLocaleString()}`}</td>
                     </tr>
                   );
                 })}
@@ -81,12 +85,13 @@ const CheckOutPage = () => {
             </table>
 
             <div>
+              {console.log(total)}
               <div className="text-right mt-5">
-                <p>Total amount - NGN {parseFloat(total).toFixed(2)}</p>
+                <p>Total amount - NGN {parseFloat(total).toLocaleString()}</p>
                 <p>Shipping fee - NGN {roundedShippingFee}</p>
                 <p>
                   Total - NGN{" "}
-                  {parseFloat(total + roundedShippingFee).toFixed(2)}
+                  {parseFloat(total + roundedShippingFee).toLocaleString()}
                 </p>
 
                 <div className="flex items-center justify-center h-fit ">

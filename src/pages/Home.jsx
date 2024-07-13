@@ -1,12 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 
 import { AboutUs, Product, Hero } from "../components";
 
-import bestSellerProduct from "../data/bestSellerProductData";
-import homeProductData from "../data/homeProductData";
+import { ProductContext } from "../contexts/ProductContext";
+
+
+
+// import bestSellerProduct from "../data/bestSellerProductData";
+// import homeProductData from "../data/homeProductData";
+
+
 
 const Home = () => {
+
+  const { products } = useContext(ProductContext);
+  const bestSellerProduct = products.slice(0, 6)
+  const homeProductData = products.slice(7, 13)
+
   //linking about section in nav
   const location = useLocation();
 

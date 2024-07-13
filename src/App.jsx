@@ -9,6 +9,7 @@ import {
   PaymentDetailsPage,
   ShippingDetails,
   Completed,
+  ProductDetails,
 } from "./pages";
 import {  PageNotFound } from "./components";
 
@@ -21,6 +22,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductListPage />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+
+
         <Route path="/checkout" element={<CheckOutPage />} />
         <Route path="/checkout/processing" element={<CheckOutProcess />} />
         <Route path="/checkout/shipping-details" element={<ShippingDetails />} />

@@ -8,16 +8,21 @@ import { FaHeart } from "react-icons/fa";
 
 //import cart conntext
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);
 
   // destructure product
-  const { id, image, title, price } = product;
+  const { id, photos, name, current_price } = product;
 
   // set like state
   const [isLikeAction, setIsLikeAction] = useState(true);
 
+  //getting price
+  const price = current_price?.[0]?.NGN?.[0] || 1000;
+
+  //handling like action
   const handleLike = () => {
     setIsLikeAction(!isLikeAction);
   };
@@ -41,42 +46,45 @@ const Product = ({ product }) => {
     <div className=" mx-auto w-full h-full my-0 md:my-1 lg:my-1 xl:my-1">
       <div className="product-shadow relative h-full group overflow-hidden transition box-border p-3 bg-white">
         <div className="w-full h-full flex flex-col justify-between items-left ">
-          {/* image */}
-          <div className="w-full mx-auto flex justify-center items-center">
-            <img
-              src={image}
-              alt={title}
-              className="h-[180px] w-full object-cover object-center group-hover:scale-[1.04] transition duration-300"
-            />
-          </div>
+          {/* product_image */}
+          <Link to={`/products/${id}`}>
+            <div className="w-full mx-auto flex justify-center items-center">
+              <img
+                src={`https://api.timbu.cloud/images/${photos[0].url}`}
+                alt={name}
+                className="h-[180px] w-full object-cover object-center group-hover:scale-[1.04] transition duration-300 cursor-pointer"
+              />
+            </div>
+          </Link>
 
-            <div className="p-2 ">
-              <div className="w-full  flex justify-between items-center gap-5">
+          <div className="p-2 ">
+            <div className="w-full  flex justify-between items-center gap-5">
+              <Link to={`/products/${id}`}>
                 <h1 className="font-semibold text-sm sm:text-[16px] lg:text-[20px] w-fit mt-2">
-                  {title}
+                  {name}
                 </h1>
-                <button onClick={handleLike}>
-                  {isLikeAction ? (
-                    <div className=" text-white z-10">
-                      <CiHeart className="text-2xl" />
-                    </div>
-                  ) : (
-                    <div className="z-10">
-                      <FaHeart className="text-lg" style={{ color: "red" }} />
-                    </div>
-                  )}
-                </button>
-              </div>
+              </Link>
+              <button onClick={handleLike}>
+                {isLikeAction ? (
+                  <div className=" text-black z-10">
+                    <CiHeart className="text-2xl" />
+                  </div>
+                ) : (
+                  <div className="z-10">
+                    <FaHeart className="text-lg" style={{ color: "red" }} />
+                  </div>
+                )}
+              </button>
+            </div>
 
-              <p>NGN {price.toLocaleString()}</p>
-              <p className="flex gap-[4px] mb-2">
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-              </p>
- 
+            <p>NGN {price.toLocaleString()}</p>
+            <p className="flex gap-[4px] mb-2">
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+            </p>
 
             <button
               onClick={() => addToCart(product, id)}

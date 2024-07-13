@@ -9,7 +9,9 @@ const CartItem = ({ item }) => {
   const { removeFromCart, increaseAmount, decreaseAmount } =
     useContext(CartContext);
 
-  const { id, image, title, price, amount, label } = item;
+  const { id, photos, name, current_price, amount } = item;
+  //getting price
+  const price = current_price?.[0]?.NGN?.[0] || '1000';
 
   return (
     <div className="border-b-[1px]  my-9 box-border md:text-[20px]">
@@ -19,12 +21,12 @@ const CartItem = ({ item }) => {
             {/* dot icon */}
             <img className="" src={orderBullet} alt="orderBullet" />
 
-            {/* product image  and remove icon*/}
+            {/* product product_image  and remove icon*/}
             <div onClick={() => removeFromCart(id)} className="cursor-pointer ">
               <img
                 className="max-w-[80px] rounded-lg"
-                src={image}
-                alt={title}
+                src={`https://api.timbu.cloud/images/${photos[0].url}`}
+                alt={name}
               />
               {/* remove icon  */}
 
@@ -39,17 +41,17 @@ const CartItem = ({ item }) => {
             </div>
           </div>
 
-          {/* title and label  */}
+          {/* name and label  */}
           <div className="   flex flex-col justify-start float-left ml-auto">
-            <h1 className="mb-10">{title}</h1>
-            <p className="text-[#FF7810]">{label}</p>
+            <h1 className="mb-10">{name}</h1>
+            <p className="text-[#FF7810]">in stock</p>
           </div>
         </div>
 
         {/* price and increments */}
         <div className="flex flex-col justify-end items-end">
           {/* item price  */}
-          <div className="text-[14px] md:text-[20px] mb-9">{`NGN${price}`}</div>
+          <div className="text-[14px] md:text-[20px] mb-9">{`NGN${price.toLocaleString()}`}</div>
 
           <div className="flex gap-x-2 h-[36px] md:w-[100px] lg:w-[150px]  text-sm items-end justify-end">
             {/* decrement */}

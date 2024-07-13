@@ -16,11 +16,12 @@ const CartProvider = ({ children }) => {
   //update total price
   useEffect(() => {
     const total = cart.reduce((accumulator, currentItem) => {
-      return accumulator + currentItem.price * currentItem.amount;
+      return (
+        accumulator + currentItem.current_price[0].NGN[0] * currentItem.amount
+      );
     }, 0);
     setTotal(total);
   }, [cart]);
-
 
   //update item amount
   useEffect(() => {
