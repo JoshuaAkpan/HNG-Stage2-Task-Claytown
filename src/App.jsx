@@ -16,7 +16,7 @@ import { Footer, NavBar } from "./components";
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-futura">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

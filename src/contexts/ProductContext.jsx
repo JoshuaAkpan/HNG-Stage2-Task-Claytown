@@ -19,6 +19,15 @@ const ProductProvider = ({ children }) => {
     }, 1000); // Simulate a 1 second delay
   }, []);
 
+  // useEffect(async ()=>{
+  //   try {
+  //     const response = await
+      
+  //   } catch (error) {
+      
+  //   }
+  // }, [])
+
   return (
     <ProductContext.Provider value={{ products }}>
       {children}

@@ -2,8 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      custom: ["Nunito", "sans-serif"],
-      nunito: ["Nunito", "sans-serif"],
+      // custom: ["Nunito", "sans-serif"],
+      futura: ["Futura Bk", "sans-serif"],
+
 
       
     },

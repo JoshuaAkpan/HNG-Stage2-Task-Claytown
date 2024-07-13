@@ -9,3 +9,4 @@ export {default as PageNotFound} from './PageNotFound'
 export {default as OrderSummary} from './OrderSummary'
 export { default as Shipping } from "./Shipping";
 export { default as Payment } from "./Payment";
+export { default as Pagination } from "./Pagination";

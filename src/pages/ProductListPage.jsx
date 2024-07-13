@@ -1,10 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductContext } from "../contexts/ProductContext";
-import { Product } from "../components";
-import paginationIcon from '../assets/img/paginationIcon.png'
+import { Product, Pagination } from "../components";
 
 const ProductListPage = () => {
   const { products } = useContext(ProductContext);
+
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(4);
+
+
+  const lastPostIndex = currentPage * postsPerPage
+  const firstPostIndex = lastPostIndex - postsPerPage
+  const totalPosts = products.length
+  const currentPosts = products.slice(firstPostIndex, lastPostIndex)
+
 
   return (
     <div className="">
@@ -27,15 +37,15 @@ const ProductListPage = () => {
             </div>
           </div>
 
-          <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 mx-auto gap-4 md:mx-0 overflow-hidden auto-rows-fr">
-            {products.map((product) => {
-              return <Product product={product} key={product.id} />;
+          <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 mx-auto gap-4 md:mx-0 overflow-hidden auto-rows-fr pb-5">
+            {currentPosts.map((currentPost) => {
+              return <Product product={currentPost} key={currentPost.id} />;
             })}
           </div>
         </div>
 
-        <div className="mt-[159px] flex justify-center items-center">
-          <img className="w-[80%]" src={paginationIcon} alt="pagination" />
+        <div className="">
+          <Pagination totalPosts={totalPosts} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
         </div>
       </section>
     </div>
