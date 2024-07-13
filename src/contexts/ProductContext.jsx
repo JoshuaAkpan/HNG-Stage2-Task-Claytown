@@ -16,8 +16,10 @@ const ProductProvider = ({ children }) => {
   useEffect(async () => {
     try {
       const response = await axios.get(
-        `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_APP_KEY}`
+        `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
       );
+
+
       
       setProducts(response.data.items);
       
