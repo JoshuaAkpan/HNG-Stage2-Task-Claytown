@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
-import axiosInstance from "../api/axios";
+// import axiosInstance from "../api/axios";
+import axios from 'axios'
 
 
 
@@ -14,8 +15,8 @@ const ProductProvider = ({ children }) => {
   useEffect( () => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get(
-          `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
+        const response = await axios.get(
+          `/api/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
         );
   
         setProducts(response.data.items);

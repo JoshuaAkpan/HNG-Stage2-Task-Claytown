@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 const CheckOutPage = () => {
   const { cart, total } = useContext(CartContext);
 
-  //getting price
-  console.log("The total is", total);
 
   //calculating shipping fee
   const shippingPercentage = 1.14;
@@ -85,7 +83,6 @@ const CheckOutPage = () => {
             </table>
 
             <div>
-              {console.log(total)}
               <div className="text-right mt-5">
                 <p>Total amount - NGN {parseFloat(total).toLocaleString()}</p>
                 <p>Shipping fee - NGN {roundedShippingFee}</p>
