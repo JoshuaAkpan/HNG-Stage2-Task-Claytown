@@ -44,5 +44,5 @@
     "react-router-dom": "^6.4.3",
     "tailwindcss": "^3.2.4"
   },
-  "proxy": "https://api.timbu.cloud"
+  "proxy": "https://timbu-get-all-products.reavdev.workers.dev"
 }

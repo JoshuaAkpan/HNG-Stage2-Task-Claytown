@@ -3,7 +3,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://api.timbu.cloud',
+      target: 'https://timbu-get-all-products.reavdev.workers.dev',
       changeOrigin: true,
       pathRewrite: {
         '^/api': '',
