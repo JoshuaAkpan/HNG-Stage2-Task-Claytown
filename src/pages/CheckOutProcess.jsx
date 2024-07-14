@@ -71,7 +71,7 @@ const CheckOutProcess = () => {
 
           {/* Order Summary  */}
 
-          <div className="block lg:hidden md:text-right ">
+          <div className="block lg:hidden">
 
             <OrderSummary
               link="/checkout/order-complete"
