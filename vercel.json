@@ -1,3 +1,7 @@
+// {
+//     
+// }
+
 {
     "version": 2,
     "builds": [
@@ -30,5 +34,16 @@
         "src": "/(.*)",
         "dest": "/client/index.html"
       }
+    ],
+
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://api.timbu.cloud/$1"
+        },
+        {
+            "source":"/(.*)",
+            "destination":"/index.html"
+        }
     ]
   }
