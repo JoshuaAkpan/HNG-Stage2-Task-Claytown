@@ -16,7 +16,7 @@ const ProductProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `/api?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
+          `${process.env.REACT_APP_API_URL}?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
         );
   
         setProducts(response.data.items);
