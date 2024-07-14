@@ -19,7 +19,6 @@ const ProductProvider = ({ children }) => {
         `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
       );
 
-
       
       setProducts(response.data.items);
       
@@ -31,7 +30,9 @@ const ProductProvider = ({ children }) => {
   }, []);
 
 
-  console.log(products);
+  if (error){
+    return <div>Error: {error}</div>
+  }
 
 
   return (
