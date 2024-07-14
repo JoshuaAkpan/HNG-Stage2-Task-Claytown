@@ -1,8 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance from "../api/axios";
 
-// importing product data - STATIC DATA
-// import productsData from "../data/productsData";
+
 
 // create context
 export const ProductContext = createContext();
@@ -12,16 +11,21 @@ const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
 
-  useEffect(async () => {
-    try {
-      const response = await axios.get(
-        `https://api.timbu.cloud/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
-      );
-
-      setProducts(response.data.items);
-    } catch (error) {
-      setError(error.message);
+  useEffect( () => {
+    const fetchData = async () => {
+      try {
+        const response = await axiosInstance.get(
+          `/products?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`
+        );
+  
+        setProducts(response.data.items);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
+
+    fetchData();
+
   }, []);
 
   if (error) {
