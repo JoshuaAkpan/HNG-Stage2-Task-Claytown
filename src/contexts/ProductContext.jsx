@@ -29,7 +29,7 @@ const ProductProvider = ({ children }) => {
   }
 
   if (!products) {
-    return <div>Loading.....</div>;
+    return <div>Loading.........</div>;
   }
 
   return (
