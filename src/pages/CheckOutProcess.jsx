@@ -74,7 +74,7 @@ const CheckOutProcess = () => {
           <div className="block lg:hidden md:text-right ">
 
             <OrderSummary
-              link="/checkout/shipping-details"
+              link="/checkout/order-complete"
               text="Continue to Shipping"
             />
           </div>
@@ -85,7 +85,7 @@ const CheckOutProcess = () => {
 
       <div className="hidden lg:block">
         <OrderSummary
-          link="/checkout/shipping-details"
+          link="/checkout/order-complete"
           text="Continue to Shipping"
         />
       </div>

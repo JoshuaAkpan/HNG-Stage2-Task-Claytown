@@ -1,15 +1,26 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import trailing from '../assets/img/trailing.png'
+import { CartContext } from "../contexts/CartContext";
+
+
+
 
 const OrderSummary = ({link, text}) => {
+    const { total } = useContext(CartContext);
+
+
+  //calculating shipping fee
+  const shippingPercentage = 1.14;
+  const shippingFee = (shippingPercentage / 100) * total;
+  const roundedShippingFee = Math.round(shippingFee);
 
   return (
     <div className="md:max-w-sm lg:max-w-sm xl:max-w-sm bg-[#FCF9F1] lg:p-[32px] lg:w-[380px] lg:h-[589px] lg:ml-4 lg:border lg:border-[#D1D1D8] lg:rounded-[15px]">
       <h1 className="font-semibold text-[24px]">Order Summary</h1>
       <div className="flex justify-between pb-[6px]">
         <p>Price</p>
-        <p>NGN 61,600</p>
+        <p>NGN {parseFloat(total).toLocaleString()}</p>
       </div>
       <div className="flex justify-between pb-[6px]">
         <p>Discount </p>
@@ -17,7 +28,7 @@ const OrderSummary = ({link, text}) => {
       </div>
       <div className="flex justify-between pb-[6px]">
         <p>Shipping </p>
-        <p>NGN700</p>
+        <p>NGN {roundedShippingFee.toLocaleString()}</p>
       </div>
 
       <div className="flex justify-between pb-[6px]">
@@ -26,7 +37,8 @@ const OrderSummary = ({link, text}) => {
       </div>
       <div className="flex justify-between pb-[13px]">
         <p>TOTAL </p>
-        <p>NGN 61,600</p>
+        <p>NGN{" "}
+        {parseFloat(total + roundedShippingFee).toLocaleString()}</p>
       </div>
       <div className="flex justify-between pb-[8px]">
         <p>Estimated Delivery by </p>
